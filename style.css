@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: rgb(255, 220, 167);
+    font-family: 'Poppins', sans-serif;
+
+  }
+  
+
+  .header {
+    background-color: rgb(255, 220, 167);
+    padding: 20px;
+    text-align: center;
+    user-select: none;
+  }
+  .vasen{
+    display: inline-block;
+    width: 20%;
+    text-align: center;
+  }
+
+  .keski {
+    width: 55%;
+    display: inline-block;
+    text-align: center;
+  }
+  .oikea{
+    display: inline-block;
+    width: 20%;
+    text-align: center;
+  }
+  #tallentamattomatPisteetTxt{
+    padding-right: 5px;
+  }
+  #noppia1{
+    padding: 20px;
+  }
+  #noppia2{
+    padding: 20px;
+  }
+  #heita{
+    padding: 20px;
+    display: none;
+  }
+  #talleta{
+    padding: 20px;
+    display: none;
+  }
+  #pisteetTxt1, #pisteet1{
+    display: none;
+  }
+  #pisteetTxt2, #pisteet2{
+    display: none;
+  }
+  #pisteetTxt3, #pisteet3{
+    display: none;
+  }
+  #pisteetTxt4, #pisteet4{
+    display: none;
+  }
+
+  
+  /* Clear floats after the columns */
+  .row::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .vasenYla, .vasenAla, .keski, .oikeaYla, .oikeaAla {
+      width: 100%;
+    }
+  }
