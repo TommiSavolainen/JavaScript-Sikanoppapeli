@@ -1,3 +1,5 @@
+// määritetään paljon muuttujia
+
 let noppia1 = document.getElementById('noppia1');
 let noppia2 = document.getElementById('noppia2');
 let noppa1 = document.getElementById('noppa1');
@@ -62,6 +64,10 @@ let images = [
 noppia1.addEventListener('click', pelaa1Nopalla);
 noppia2.addEventListener('click', pelaa2Nopalla);
 uusiPeli.addEventListener('click', aloitaUusiPeli);
+
+// määritetään alussa, että halutaan pelata 1 nopalla, joten noppia ruudulla 1
+// samalla kutsutaan vaihdaNimet ja kaynnistaPeli functioita
+
 function pelaa1Nopalla() {
     pelaaYhdellaNopalla = true;
     noppia1.style.cssText = 'display: none';
@@ -74,6 +80,9 @@ function pelaa1Nopalla() {
     vaihdaNimet();
     kaynnistaPeli();
 }
+
+// määritetään alussa että halutaan pelata 2 nopalla, joten noppia ruudulla 2
+
 function pelaa2Nopalla() {
     pelaaKahdellaNopalla = true;
     noppia1.style.cssText = 'display: none';
@@ -85,6 +94,9 @@ function pelaa2Nopalla() {
     vaihdaNimet();
     kaynnistaPeli();
 }
+
+// Aloitetaan uusi peli samoilla pelaajilla, nollataan pisteet, nollataan tekstit ja aktivoidaan peli napit
+
 function aloitaUusiPeli() {
     tallentamattomatPisteet.innerText = 0;
     pisteet1.innerText = 0;
@@ -123,6 +135,9 @@ function aloitaUusiPeli() {
     }
     kaynnistaPeli();
 }
+
+// Kuvitetaan pelaajien vuorot
+
 function kaynnistaPeli() {
     if (pelaaja1Vuoro) {
         if (pelaaja1Mukana) {
@@ -221,6 +236,10 @@ function kaynnistaPeli() {
         talleta.addEventListener('click', talletaPisteet);
     }
 }
+
+// Talletetaan tallentamattomat pisteet omiin pisteisiin, tarkastetaan onko tarpeeksi pisteitä 
+// voittoon ja vaihdetaan pelaajien vuoroa.
+
 function talletaPisteet() {
     if (pelaaja1Vuoro) {
         pisteet1.innerText =
@@ -316,6 +335,9 @@ function talletaPisteet() {
         }
     }
 }
+
+// Muodostetaan noppien animaatiot, arvotaan noppien luvut ja lisätään pisteet sääntöjen mukaan.
+
 function heitaNoppaa() {
     noppa1.classList.add('shake');
     noppa2.classList.add('shake');
@@ -336,9 +358,9 @@ function heitaNoppaa() {
             }
         } else if (pelaaKahdellaNopalla) {
             if (noppa1Luku == noppa2Luku) {
-                if (noppa1Luku+1 == 1 && noppa2Luku+1 == 1){
+                if (noppa1Luku + 1 == 1 && noppa2Luku + 1 == 1) {
                     tallentamattomatPisteet.innerText =
-                    Number(tallentamattomatPisteet.innerText) + 25
+                        Number(tallentamattomatPisteet.innerText) + 25;
                 } else {
                     tallentamattomatPisteet.innerText =
                         Number(tallentamattomatPisteet.innerText) +
@@ -358,6 +380,9 @@ function heitaNoppaa() {
         }
     }, 1000);
 }
+
+// Vaihdetaan kaikkien osallistujien nimet, tuodaan pisteitä tekstit esiin ja piilotetaan nimien 
+// syöttölaatikot
 
 function vaihdaNimet() {
     console.log(document.getElementById('nimi1').value);
