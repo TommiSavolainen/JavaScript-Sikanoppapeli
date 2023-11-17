@@ -336,9 +336,14 @@ function heitaNoppaa() {
             }
         } else if (pelaaKahdellaNopalla) {
             if (noppa1Luku == noppa2Luku) {
-                tallentamattomatPisteet.innerText =
-                    Number(tallentamattomatPisteet.innerText) +
-                    (noppa1Luku + 1 + noppa2Luku + 1) * 2;
+                if (noppa1Luku+1 == 1 && noppa2Luku+1 == 1){
+                    tallentamattomatPisteet.innerText =
+                    Number(tallentamattomatPisteet.innerText) + 25
+                } else {
+                    tallentamattomatPisteet.innerText =
+                        Number(tallentamattomatPisteet.innerText) +
+                        (noppa1Luku + 1 + noppa2Luku + 1) * 2;
+                }
             } else if (noppa1Luku + 1 == 1 || noppa2Luku + 1 == 1) {
                 tallentamattomatPisteet.innerText = 0;
                 talletaPisteet();
