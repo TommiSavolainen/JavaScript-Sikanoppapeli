@@ -237,7 +237,7 @@ function kaynnistaPeli() {
     }
 }
 
-// Talletetaan tallentamattomat pisteet omiin pisteisiin, tarkastetaan onko tarpeeksi pisteitä 
+// Talletetaan tallentamattomat pisteet omiin pisteisiin, tarkastetaan onko tarpeeksi pisteitä
 // voittoon ja vaihdetaan pelaajien vuoroa.
 
 function talletaPisteet() {
@@ -381,12 +381,12 @@ function heitaNoppaa() {
     }, 1000);
 }
 
-// Vaihdetaan kaikkien osallistujien nimet, tuodaan pisteitä tekstit esiin ja piilotetaan nimien 
+// Vaihdetaan kaikkien osallistujien nimet, tuodaan pisteitä tekstit esiin ja piilotetaan nimien
 // syöttölaatikot
 
 function vaihdaNimet() {
-    if (pelaaYhdellaNopalla){
-        heita.innerText = 'Heitä noppaa'
+    if (pelaaYhdellaNopalla) {
+        heita.innerText = 'Heitä noppaa';
     }
     if (nimi1.value != '') {
         pelaaja1.innerText = nimi1.value;
