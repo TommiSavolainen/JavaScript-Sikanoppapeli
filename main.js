@@ -385,7 +385,9 @@ function heitaNoppaa() {
 // syöttölaatikot
 
 function vaihdaNimet() {
-    console.log(document.getElementById('nimi1').value);
+    if (pelaaYhdellaNopalla){
+        heita.innerText = 'Heitä noppaa'
+    }
     if (nimi1.value != '') {
         pelaaja1.innerText = nimi1.value;
         nimi1.style.cssText = 'display: none';
